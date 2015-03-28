@@ -1,14 +1,17 @@
-int ledpin = 5;
+int ledPin = 5;
 int buttonApin = 9;
 int buttonBpin = 8;
 
 byte leds = 0;
 
 void setup()
+
 {
-  pinMode (ledPin, OUTPUT);
-  pinMode (buttonApin, INPUT_PULLUP);
-  pinMode (buttonBpin, INPUT_PULLUP);
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonApin, INPUT);
+  digitalWrite(buttonApin, HIGH);
+  pinMode (buttonBpin, INPUT);
+  digitalWrite (buttonBpin, HIGH);
 }
 
 void loop()
@@ -19,6 +22,6 @@ void loop()
   }
   if (digitalRead (buttonBpin) == LOW)
   {
-    digitalWrite (LedPin, LOW);
+    digitalWrite (ledPin, LOW);
   }
 }
