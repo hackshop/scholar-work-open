@@ -1,0 +1,30 @@
+/*
+Adafruit Arduino - Lesson 6. Inputs
+*/
+
+int ledPin = 5;
+int buttonApin = 9;
+int buttonBpin = 8;
+
+byte leds = 0;
+
+void setup ()
+{
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonApin, INPUT);
+  digitalWrite(buttonApin, HIGH);
+  pinMode (buttonBpin, INPUT);
+  digitalWrite (buttonBpin, HIGH);
+}
+
+void loop()
+{
+  if (digitalRead (buttonApin) == LOW)
+  {
+    digitalWrite (ledPin, HIGH);
+  }
+  if (digitalRead (buttonBpin) == LOW)
+  {
+    digitalWrite (ledPin, LOW);
+  }
+}
